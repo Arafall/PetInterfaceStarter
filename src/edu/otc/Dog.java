@@ -7,7 +7,7 @@ package edu.otc;
  */
 
 
-public class Dog extends Animal {
+public class Dog extends Animal implements Pet {
     /**
      * A Constructor that initializes a new instance of the Animal class with the specified name.
      * Params:name - The name of the animal, used to identify it within the simulation.
@@ -19,4 +19,8 @@ public class Dog extends Animal {
     }
 
 
+    @Override
+    public void feed(String fuel) {
+        System.out.printf("Thank you for the %s.\n", fuel);
+    }
 }
